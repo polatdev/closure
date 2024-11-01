@@ -95,7 +95,10 @@ class ReflectionClosure extends ReflectionFunction
         $_file = var_export($fileName, true);
         $_dir = var_export(dirname($fileName), true);
         $_namespace = var_export($ns, true);
-        $_class = var_export(trim($className, '\\'), true);
+        $_class = "";
+        if (!empty($className)) {
+            $_class = var_export(trim($className, '\\'), true);
+        }
         $_function = $ns . ($ns == '' ? '' : '\\') . '{closure}';
         $_method = ($className == '' ? '' : trim($className, '\\') . '::') . $_function;
         $_function = var_export($_function, true);

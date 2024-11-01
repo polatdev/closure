@@ -15,7 +15,7 @@ use ReflectionObject;
 /**
  * Provides a wrapper for serialization of closures
  */
-class SerializableClosure implements Serializable
+class SerializableClosure
 {
     /**
      * @var Closure Wrapped closure
